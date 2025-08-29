@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나의 포트폴리오</title>
+  <style>
+    /* 기본 스타일 */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 15px 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    header nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    header nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #222;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+    .skills span {
+      display: inline-block;
+      background: #e0e0e0;
+      margin: 5px;
+      padding: 8px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 네비게이션 -->
+  <header>
+    <nav>
+      <a href="#home">홈</a>
+      <a href="#about">소개</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#skills">기술스택</a>
+      <a href="#contact">연락처</a>
+    </nav>
+  </header>
+
+  <!-- 홈 섹션 -->
+  <section id="home">
+    <h1>안녕하세요! 👋</h1>
+    <p>저는 웹 개발자 홍길동입니다. <br>
+    아이디어를 현실로 만드는 것을 좋아합니다.</p>
+  </section>
+
+  <!-- 소개 섹션 -->
+  <section id="about">
+    <h2>소개</h2>
+    <p>학력: ○○대학교 컴퓨터공학과</p>
+    <p>경력: 프론트엔드/백엔드 프로젝트 경험 다수</p>
+    <p>관심분야: 웹 개발, 데이터 시각화, 오픈소스</p>
+  </section>
+
+  <!-- 프로젝트 섹션 -->
+  <section id="projects">
+    <h2>프로젝트</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>포트폴리오 웹사이트</h3>
+        <p>HTML/CSS/JS를 활용해 만든 개인 웹페이지</p>
+        <a href="https://github.com/username/portfolio" target="_blank">GitHub 보기</a>
+      </div>
+      <div class="project-card">
+        <h3>Todo App</h3>
+        <p>간단한 할 일 관리 애플리케이션</p>
+        <a href="https://github.com/username/todo-app" target="_blank">GitHub 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 기술스택 섹션 -->
+  <section id="skills">
+    <h2>기술스택</h2>
+    <div class="skills">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>Git</span>
+      <span>GitHub Pages</span>
+    </div>
+  </section>
+
+  <!-- 연락처 섹션 -->
+  <section id="contact">
+    <h2>연락처</h2>
+    <p>Email: <a href="mailto:example@email.com">example@email.com</a></p>
+    <p>GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/username" target="_blank">linkedin.com/in/username</a></p>
+  </section>
+
+  <!-- 푸터 -->
+  <footer>
+    <p>© 2025 홍길동. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
