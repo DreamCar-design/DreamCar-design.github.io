@@ -5,16 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>나의 포트폴리오</title>
   <style>
-    /* 기본 스타일 */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       line-height: 1.6;
-      background: #f9f9f9;
+      background: #f5f7fa;
       color: #333;
     }
     header {
-      background: #222;
+      background: #2c3e50;
       color: #fff;
       padding: 15px 20px;
       position: fixed;
@@ -24,45 +23,93 @@
     }
     header nav a {
       color: #fff;
-      margin: 0 10px;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
     }
     header nav a:hover {
-      text-decoration: underline;
+      color: #1abc9c;
     }
     section {
-      padding: 80px 20px;
-      max-width: 900px;
+      padding: 90px 20px;
+      max-width: 1000px;
       margin: auto;
     }
     h1, h2 {
-      color: #222;
+      color: #2c3e50;
     }
+
+    /* 홈(히어로) 섹션 */
+    #home {
+      background: url('https://picsum.photos/1200/600?grayscale') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 160px 20px;
+    }
+    #home h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+    #home p {
+      font-size: 20px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    /* 프로젝트 카드 */
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
     .project-card {
       background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
     }
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .project-card div {
       padding: 15px;
     }
+    .project-card h3 {
+      margin-top: 0;
+    }
+    .project-card a {
+      color: #1abc9c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* 기술스택 */
     .skills span {
       display: inline-block;
-      background: #e0e0e0;
+      background: #1abc9c;
+      color: white;
       margin: 5px;
-      padding: 8px 12px;
+      padding: 8px 14px;
       border-radius: 20px;
       font-size: 14px;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    .skills span:hover {
+      background: #16a085;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
     }
   </style>
 </head>
@@ -82,8 +129,7 @@
   <!-- 홈 섹션 -->
   <section id="home">
     <h1>안녕하세요! 👋</h1>
-    <p>저는 웹 개발자 홍길동입니다. <br>
-    아이디어를 현실로 만드는 것을 좋아합니다.</p>
+    <p>저는 웹 개발자 홍길동입니다.<br>아이디어를 현실로 만드는 것을 좋아합니다.</p>
   </section>
 
   <!-- 소개 섹션 -->
@@ -99,14 +145,20 @@
     <h2>프로젝트</h2>
     <div class="projects">
       <div class="project-card">
-        <h3>포트폴리오 웹사이트</h3>
-        <p>HTML/CSS/JS를 활용해 만든 개인 웹페이지</p>
-        <a href="https://github.com/username/portfolio" target="_blank">GitHub 보기</a>
+        <img src="https://picsum.photos/400/200?random=1" alt="포트폴리오 웹사이트 썸네일">
+        <div>
+          <h3>포트폴리오 웹사이트</h3>
+          <p>HTML/CSS/JS를 활용해 만든 개인 웹페이지</p>
+          <a href="https://github.com/username/portfolio" target="_blank">GitHub 보기</a>
+        </div>
       </div>
       <div class="project-card">
-        <h3>Todo App</h3>
-        <p>간단한 할 일 관리 애플리케이션</p>
-        <a href="https://github.com/username/todo-app" target="_blank">GitHub 보기</a>
+        <img src="https://picsum.photos/400/200?random=2" alt="Todo App 썸네일">
+        <div>
+          <h3>Todo App</h3>
+          <p>간단한 할 일 관리 애플리케이션</p>
+          <a href="https://github.com/username/todo-app" target="_blank">GitHub 보기</a>
+        </div>
       </div>
     </div>
   </section>
@@ -138,3 +190,4 @@
 
 </body>
 </html>
+
